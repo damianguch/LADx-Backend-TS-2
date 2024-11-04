@@ -1,0 +1,56 @@
+Time logged: (2:51:34 AM):-  Message: Login information"kwame@test.com"
+Time logged: (2:51:35 AM):-  Message: This email is not registered
+Time logged: (2:52:28 AM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (2:52:28 AM):-  Message: User logged in successfully
+Time logged: (2:52:52 AM):-  Message: Profile Retrieved Successfully!
+Time logged: (5:56:40 AM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (5:56:41 AM):-  Message: User logged in successfully
+Time logged: (6:59:57 AM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (6:59:58 AM):-  Message: User logged in successfully
+Time logged: (7:05:24 AM):-  Message: Operation `users.findOne()` buffering timed out after 10000ms
+Time logged: (7:06:24 AM):-  Message: Profile Updated Successfully!
+Time logged: (10:24:02 AM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (10:24:03 AM):-  Message: User logged in successfully
+Time logged: (10:34:50 AM):-  Message: Profile Retrieved Successfully!
+Time logged: (10:38:41 AM):-  Message: Profile Updated Successfully!
+Time logged: (10:39:52 AM):-  Message: Profile Updated Successfully!
+Time logged: (10:43:45 AM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (10:43:45 AM):-  Message: User logged in successfully
+Time logged: (10:47:07 AM):-  Message: Login information""
+Time logged: (10:47:07 AM):-  Message: Email Required!
+Time logged: (10:52:23 AM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (10:52:24 AM):-  Message: User logged in successfully
+Time logged: (11:03:29 AM):-  Message: Profile Updated Successfully!
+Time logged: (11:09:09 AM):-  Message: Profile Updated Successfully!
+Time logged: (12:04:40 PM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (12:04:40 PM):-  Message: User logged in successfully
+Time logged: (12:05:06 PM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (12:05:07 PM):-  Message: User logged in successfully
+Time logged: (12:06:48 PM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (12:06:49 PM):-  Message: User logged in successfully
+Time logged: (12:11:05 PM):-  Message: Profile Updated Successfully!
+Time logged: (12:12:42 PM):-  Message: Profile Updated Successfully!
+Time logged: (12:21:52 PM):-  Message: Profile Updated Successfully!
+Time logged: (12:29:24 PM):-  Message: Profile Updated Successfully!
+Time logged: (12:32:13 PM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (12:32:14 PM):-  Message: User logged in successfully
+Time logged: (12:37:29 PM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (12:37:30 PM):-  Message: User logged in successfully
+Time logged: (12:38:46 PM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (12:38:47 PM):-  Message: User logged in successfully
+Time logged: (12:40:56 PM):-  Message: Login information"damianguch@yahoo.com"
+Time logged: (12:40:57 PM):-  Message: User logged in successfully
+Time logged: (6:37:08 PM):-  Message: "Password does not match!"
+Time logged: (6:37:46 PM):-  Message: {"Error":"Cannot read properties of undefined (reading 'body')"}
+Time logged: (6:37:46 PM):-  Message: "Error sending OTP:Resolved credential object is not valid"
+Time logged: (6:39:05 PM):-  Message: "OTP verified successfully!"
+Time logged: (6:39:05 PM):-  Message: "OTP Verification Error!"
+Time logged: (7:08:35 PM):-  Message: {"Error":"Invalid status code: 20"}
+Time logged: (7:09:10 PM):-  Message: "OTP Verification Error!"
+Time logged: (7:11:15 PM):-  Message: "OTP Verification Error!"
+Time logged: (7:14:51 PM):-  Message: "Invalid OTP"
+Time logged: (7:19:23 PM):-  Message: "OTP Verification Error!"
+Time logged: (7:19:23 PM):-  Message: "OTP verified successfully!"
+Time logged: (7:20:47 PM):-  Message: "Email already registered"
+Time logged: (7:21:41 PM):-  Message: "OTP verified successfully!"
+Time logged: (7:21:41 PM):-  Message: "OTP Verification Error!"

@@ -1,0 +1,49 @@
+Time logged: (1:02:27 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (1:08:57 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (1:19:39 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (1:46:09 AM):-  Message: Unauthorized! Please login
+Time logged: (1:48:50 AM):-  Message: Profile Updated Successfully!
+Time logged: (1:56:04 AM):-  Message: Profile Updated Successfully!
+Time logged: (2:09:11 AM):-  Message: Profile Updated Successfully!
+Time logged: (2:11:32 AM):-  Message: Profile Updated Successfully!
+Time logged: (2:35:20 AM):-  Message: Profile Updated Successfully!
+Time logged: (2:46:08 AM):-  Message: Profile Updated Successfully!
+Time logged: (2:57:04 AM):-  Message: Profile Updated Successfully!
+Time logged: (4:16:54 AM):-  Message: Profile Updated Successfully!
+Time logged: (4:20:47 AM):-  Message: Profile Updated Successfully!
+Time logged: (4:26:05 AM):-  Message: Profile Updated Successfully!
+Time logged: (4:31:33 AM):-  Message: Profile Updated Successfully!
+Time logged: (4:32:43 AM):-  Message: Profile Updated Successfully!
+Time logged: (4:36:41 AM):-  Message: Profile Updated Successfully!
+Time logged: (4:38:04 AM):-  Message: Unauthorized! Please login
+Time logged: (4:39:33 AM):-  Message: id is not defined
+Time logged: (4:43:37 AM):-  Message: id is not defined
+Time logged: (4:50:36 AM):-  Message: fullname is not defined
+Time logged: (4:54:41 AM):-  Message: fullname is not defined
+Time logged: (5:02:49 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (8:17:36 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (8:20:18 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (8:22:19 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (8:26:46 AM):-  Message: Profile Updated Successfully!
+Time logged: (8:31:26 AM):-  Message: fullname is not defined
+Time logged: (8:39:53 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (8:49:49 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (8:58:50 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (9:03:38 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (9:04:23 AM):-  Message: Profile Updated Successfully!
+Time logged: (9:14:13 AM):-  Message: Profile Updated Successfully!
+Time logged: (9:15:22 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (9:19:52 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (9:28:03 AM):-  Message: Profile Updated Successfully!
+Time logged: (9:30:31 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (9:51:56 AM):-  Message: Profile Updated Successfully!
+Time logged: (9:57:18 AM):-  Message: Unauthorized! Please login
+Time logged: (9:59:14 AM):-  Message: id is not defined
+Time logged: (10:15:06 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (10:21:37 AM):-  Message: Login information"kwame@test.com"
+Time logged: (10:21:38 AM):-  Message: User logged in successfully: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt3YW1lQHRlc3QuY29tIiwiaWQiOiI2NzA2NTMxMzMwNDM3YWY1ODcyZTljMTYiLCJpYXQiOjE3Mjg4MTEyOTgsImV4cCI6MTcyODgxNDg5OH0.UxVxvTVe4AZpMC_LqRuhiIs3YkHO3P4B0zbZ9DLV3fs"
+Time logged: (10:23:51 AM):-  Message: Profile Photo Updated Successfully!
+Time logged: (11:25:13 AM):-  Message: No token found!
+Time logged: (11:27:29 AM):-  Message: Login information"kwame@test.com"
+Time logged: (11:27:30 AM):-  Message: User logged in successfully: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt3YW1lQHRlc3QuY29tIiwiaWQiOiI2NzA2NTMxMzMwNDM3YWY1ODcyZTljMTYiLCJpYXQiOjE3Mjg4MTUyNTAsImV4cCI6MTcyODgxODg1MH0.-i9eHOk9VvB4kd4ZpoMy8wXMP2WApv6qMQvDg7NkMlo"
+Time logged: (11:27:45 AM):-  Message: Profile Updated Successfully!

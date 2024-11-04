@@ -1,0 +1,46 @@
+Time logged: (1:26:07 AM):-  Message: "OTP sent to your email"
+Time logged: (1:59:30 AM):-  Message: "OTP sent to your email"
+Time logged: (2:00:23 AM):-  Message: {"Error":"User data not found in Redis"}
+Time logged: (2:00:23 AM):-  Message: {"Error":"User data not found"}
+Time logged: (2:00:23 AM):-  Message: {"Error":"User data not found"}
+Time logged: (2:00:23 AM):-  Message: {"Error":"User data not found in Redis"}
+Time logged: (2:02:31 AM):-  Message: {"Success":"User account created for damian_oguche@yahoo.com"}
+Time logged: (2:55:35 AM):-  Message: "OTP sent to your email"
+Time logged: (2:57:09 AM):-  Message: "OTP sent to your email"
+Time logged: (2:57:37 AM):-  Message: {"Error":"User data not found in Redis"}
+Time logged: (2:57:37 AM):-  Message: {"Error":"User data not found"}
+Time logged: (2:58:08 AM):-  Message: {"Success":"User account created for damian_oguche@yahoo.com"}
+Time logged: (3:01:26 AM):-  Message: "OTP sent to your email"
+Time logged: (3:02:01 AM):-  Message: {"Error":"User data not found"}
+Time logged: (3:02:01 AM):-  Message: {"Error":"User data not found in Redis"}
+Time logged: (3:02:26 AM):-  Message: {"Success":"User account created for damian_oguche@yahoo.com"}
+Time logged: (3:02:46 AM):-  Message: {"Error":"User data not found in Redis"}
+Time logged: (3:02:46 AM):-  Message: {"Error":"User data not found"}
+Time logged: (3:03:01 AM):-  Message: {"Error":"E11000 duplicate key error collection: LADx.users index: email_1 dup key: { email: \"damian_oguche@yahoo.com\" }"}
+Time logged: (3:03:29 AM):-  Message: {"Error":"E11000 duplicate key error collection: LADx.users index: email_1 dup key: { email: \"damian_oguche@yahoo.com\" }"}
+Time logged: (3:07:06 AM):-  Message: "OTP sent to your email"
+Time logged: (3:07:28 AM):-  Message: {"Success":"User account created for damian_oguche@yahoo.com"}
+Time logged: (3:09:48 AM):-  Message: {"Error":"User data not found in Redis"}
+Time logged: (3:09:48 AM):-  Message: {"Error":"User data not found"}
+Time logged: (3:24:16 AM):-  Message: "OTP sent to the email"
+Time logged: (3:24:47 AM):-  Message: {"Success":"User account created for damian_oguche@yahoo.com"}
+Time logged: (3:35:38 AM):-  Message: Login attempt for email: damian_oguche@yahoo.om
+Time logged: (3:35:38 AM):-  Message: Login failed: Email not registered - damian_oguche@yahoo.om
+Time logged: (3:35:44 AM):-  Message: Login attempt for email: damian_oguche@yahoo.om
+Time logged: (3:35:45 AM):-  Message: Login failed: Email not registered - damian_oguche@yahoo.om
+Time logged: (3:36:15 AM):-  Message: Login attempt for email: damian_oguche@yahoo.com
+Time logged: (3:36:15 AM):-  Message: User logged in successfully: damian_oguche@yahoo.com
+Time logged: (11:15:07 AM):-  Message: "OTP sent to the email"
+Time logged: (11:16:02 AM):-  Message: {"Error":"User data not found in Redis"}
+Time logged: (11:16:02 AM):-  Message: {"Error":"User data not found"}
+Time logged: (11:16:42 AM):-  Message: {"Success":"User account created for damian_oguche@yahoo.com"}
+Time logged: (11:19:12 AM):-  Message: {"Error":"User data not found in Redis"}
+Time logged: (11:19:12 AM):-  Message: {"Error":"User data not found"}
+Time logged: (11:19:23 AM):-  Message: {"Success":"User account created for damian_oguche@yahoo.com"}
+Time logged: (11:20:28 AM):-  Message: {"Error":"User data not found in Redis"}
+Time logged: (11:20:28 AM):-  Message: {"Error":"User data not found"}
+Time logged: (11:20:36 AM):-  Message: {"Error":"E11000 duplicate key error collection: LADx.users index: email_1 dup key: { email: \"damian_oguche@yahoo.com\" }"}
+Time logged: (11:21:40 AM):-  Message: {"Error":"E11000 duplicate key error collection: LADx.users index: email_1 dup key: { email: \"damian_oguche@yahoo.com\" }"}
+Time logged: (11:22:09 AM):-  Message: {"Error":"E11000 duplicate key error collection: LADx.users index: email_1 dup key: { email: \"damian_oguche@yahoo.com\" }"}
+Time logged: (11:22:58 AM):-  Message: "OTP sent to the email"
+Time logged: (11:23:21 AM):-  Message: {"Success":"User account created for damian_oguche@yahoo.com"}
