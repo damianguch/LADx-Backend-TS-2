@@ -4,7 +4,7 @@ import { upload } from '../controllers/profilePhoto';
 import eventEmitter from '../utils/eventEmitter';
 import { completeRegistration } from '../controllers/registration';
 import { ForgotPassword, ResetPassword } from '../controllers/forgotPassword';
-import { validateUserSignup } from '../validators/userValidtor';
+import { validateUserSignup } from '../schema/user.schema';
 
 // Set up the event listener to use the function
 eventEmitter.on('userVerified', completeRegistration);

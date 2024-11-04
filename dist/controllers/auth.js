@@ -30,11 +30,13 @@ const passwordEncrypt_1 = __importDefault(require("../utils/passwordEncrypt"));
 const date_1 = __importDefault(require("../utils/date"));
 const sanitize_1 = require("../utils/sanitize");
 const emailService_1 = require("../utils/emailService");
-const userValidtor_1 = require("../validators/userValidtor");
+const user_schema_1 = require("../schema/user.schema");
+const zod_1 = require("zod");
 const logger_1 = __importDefault(require("../logger/logger"));
 const helper_1 = require("../helper");
 const eventEmitter_1 = __importDefault(require("../utils/eventEmitter"));
 const redisClient_1 = __importDefault(require("../utils/redisClient"));
+const otp_schema_1 = require("../schema/otp.schema");
 // @POST: SignUp Route
 const SignUp = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -93,7 +95,7 @@ const SignUp = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.status(200).json({
             status: '00',
             success: true,
-            message: result.message
+            message: `${result.message} - ${email}`
         });
     }
     catch (err) {
@@ -109,7 +111,8 @@ exports.SignUp = SignUp;
 // @POST: OTP Verification Route
 const verifyOTP = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { otp } = req.body; // Get otp from request body
+        // Validate the request body using Zod
+        const { otp } = otp_schema_1.verifyOTPSchema.parse(req.body);
         const email = req.session.email; // Retrieve email from session
         if (!otp || !email) {
             res.status(400).json({ message: 'OTP or email not found' });
@@ -149,13 +152,20 @@ const verifyOTP = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         eventEmitter_1.default.emit('userVerified', email);
         const tempUser = req.session.tempUser;
         // Save tempUser to Redis for access by registration service
-        redisClient_1.default.set(`${email}_tempUser`, JSON.stringify(tempUser), {
+        yield redisClient_1.default.set(`${email}_tempUser`, JSON.stringify(tempUser), {
             EX: 3600
         }); // Expire in 1 hour
         // Clear OTP data from session
         yield (0, helper_1.deleteOtpDataFromSession)(req);
     }
     catch (err) {
+        if (err instanceof zod_1.z.ZodError) {
+            res
+                .status(400)
+                .json({ message: 'Invalid request body', errors: err.issues });
+            return;
+        }
+        (0, createLog_1.default)(JSON.stringify({ Error: err.message }));
         if (!res.headersSent) {
             res.status(500).json({
                 status: 'E00',
@@ -166,69 +176,11 @@ const verifyOTP = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.verifyOTP = verifyOTP;
-// // Fetch tempUser data from session storage(Redis)
-// const tempUser = req.session.tempUser;
-// if (!tempUser) {
-//   res.status(400).json({ message: 'User not found' });
-//   return;
-// }
-// // Create the user in the database
-// const newUser = new User(tempUser);
-// await User.init(); // Ensure indexes are created before saving
-// const user: IUser = await newUser.save();
-// // Log the OTP verification activity
-// const otpLog = new LogFile({
-//   email: tempUser.email,
-//   ActivityName: 'User Verified OTP',
-//   AddedOn: currentDate
-// });
-// await otpLog.save();
-// // Log the new user creation activity
-// const logEntry = new LogFile({
-//   fullname: tempUser.fullname,
-//   email: tempUser.email,
-//   ActivityName: `New user created with email: ${tempUser.email}`,
-//   AddedOn: currentDate
-// });
-// await logEntry.save();
-// // Clear session and temp user data after successful verification
-// req.session.destroy((err: any) => {
-//   if (err) {
-//     createAppLog(JSON.stringify({ Error: err.message }));
-//   }
-// });
-//   // Clear tempUser and OTP from otpStore after successful verification
-//   // otpStore.delete(`${email}_tempUser`);
-//   // otpStore.delete(`${email}_otpData`);
-//   // Generate JWT token with the user payload
-//   const token = generateToken({ email: user.email, id: user.id });
-//   await createAppLog(
-//     JSON.stringify('OTP verified successfully. User account created.')
-//   );
-//   // Info level logging
-//   logger.info(`OTP verified, User account created. - ${email}`, {
-//     timestamp: new Date().toISOString()
-//   });
-//   res
-//     .cookie('token', token, {
-//       httpOnly: true, // Prevent JavaScript access
-//       secure: process.env.NODE_ENV === 'production' ? true : false, // Only send cookie over HTTPS in production
-//       sameSite: 'none', // Prevent CSRF attacks if set to Strict
-//       maxAge: 60 * 60 * 1000 // Cookie expiration time (1 hour)
-//     })
-//     .json({
-//       message: 'OTP verified successfully. User account created.',
-//       status: 200
-//     });
-// } catch (err: any) {
-//   createAppLog(JSON.stringify({ Error: err.message }));
-//   res.status(500).json({ message: 'Internal Server Error: ' + err.message });
-// }
 // @POST: User Login
 const Login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         // Validate request body using Zod
-        const validationResult = userValidtor_1.loginSchema.safeParse(req.body);
+        const validationResult = user_schema_1.loginSchema.safeParse(req.body);
         // If validation fails, return detailed error response
         if (!validationResult.success) {
             const errorResponse = {

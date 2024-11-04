@@ -17,12 +17,13 @@ import currentDate from '../utils/date';
 import { sanitizeSignUpInput } from '../utils/sanitize';
 import { Request, Response } from 'express';
 import { sendOTPEmail } from '../utils/emailService';
-import { loginSchema } from '../validators/userValidtor';
+import { loginSchema } from '../schema/user.schema';
 import { z } from 'zod';
 import logger from '../logger/logger';
 import { deleteOtpDataFromSession } from '../helper';
 import eventEmitter from '../utils/eventEmitter';
 import redisClient from '../utils/redisClient';
+import { verifyOTPSchema } from '../schema/otp.schema';
 
 // Custom error response interface
 interface ErrorResponse {
@@ -102,7 +103,7 @@ export const SignUp = async (req: Request, res: Response): Promise<void> => {
     res.status(200).json({
       status: '00',
       success: true,
-      message: result.message
+      message: `${result.message} - ${email}`
     });
   } catch (err: any) {
     createAppLog(JSON.stringify({ Error: err.message }));
@@ -117,7 +118,8 @@ export const SignUp = async (req: Request, res: Response): Promise<void> => {
 // @POST: OTP Verification Route
 export const verifyOTP = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { otp } = req.body; // Get otp from request body
+    // Validate the request body using Zod
+    const { otp } = verifyOTPSchema.parse(req.body);
     const email = req.session.email; // Retrieve email from session
 
     if (!otp || !email) {
@@ -133,7 +135,10 @@ export const verifyOTP = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    const { hashedOTP, expiresAt } = storedOTPData;
+    const { hashedOTP, expiresAt } = storedOTPData as {
+      hashedOTP: string;
+      expiresAt: number;
+    };
 
     // Check if OTP has expired
     if (Date.now() > expiresAt) {
@@ -167,13 +172,21 @@ export const verifyOTP = async (req: Request, res: Response): Promise<void> => {
 
     const tempUser = req.session.tempUser;
     // Save tempUser to Redis for access by registration service
-    redisClient.set(`${email}_tempUser`, JSON.stringify(tempUser), {
+    await redisClient.set(`${email}_tempUser`, JSON.stringify(tempUser), {
       EX: 3600
     }); // Expire in 1 hour
 
     // Clear OTP data from session
     await deleteOtpDataFromSession(req);
   } catch (err: any) {
+    if (err instanceof z.ZodError) {
+      res
+        .status(400)
+        .json({ message: 'Invalid request body', errors: err.issues });
+      return;
+    }
+
+    createAppLog(JSON.stringify({ Error: err.message }));
     if (!res.headersSent) {
       res.status(500).json({
         status: 'E00',

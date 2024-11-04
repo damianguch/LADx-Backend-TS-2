@@ -47,9 +47,7 @@ const completeRegistration = (email) => __awaiter(void 0, void 0, void 0, functi
             AddedOn: date_1.default
         });
         yield logEntry.save();
-        // // Clear temporary user data from session or Redis
-        // await deleteUserDataFromSession(req);
-        // Clear temporary user data from Redis
+        // Clear tempUser data from Redis
         yield redisClient_1.default.del(`${email}_tempUser`);
         // Generate a JWT token for the user
         const token = (0, jwt_1.generateToken)({ email: newUser.email, id: newUser.id });

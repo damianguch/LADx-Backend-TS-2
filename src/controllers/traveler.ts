@@ -10,7 +10,7 @@ import Traveller from '../models/traveller';
 import createAppLog from '../utils/createLog';
 import currentDate from '../utils/date';
 import { escape } from 'validator';
-import { travelDetailsSchema } from '../validators/traveDetailsValidator';
+import { travelDetailsSchema } from '../schema/travel.schema';
 import { sanitizedTraveldetails } from '../utils/sanitize';
 import { Request, Response } from 'express';
 
@@ -38,7 +38,7 @@ const TravelDetails = async (req: Request, res: Response): Promise<void> => {
       status: 'E00',
       success: false,
       message: 'Validation errors occurred',
-      errors: error.details.map((err) => err.message)
+      errors: error.details.map((err: any) => err.message)
     });
   }
 

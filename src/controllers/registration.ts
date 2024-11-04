@@ -39,10 +39,7 @@ const completeRegistration = async (email: string) => {
     });
     await logEntry.save();
 
-    // // Clear temporary user data from session or Redis
-    // await deleteUserDataFromSession(req);
-
-    // Clear temporary user data from Redis
+    // Clear tempUser data from Redis
     await redisClient.del(`${email}_tempUser`);
     // Generate a JWT token for the user
     const token = generateToken({ email: newUser.email, id: newUser.id });

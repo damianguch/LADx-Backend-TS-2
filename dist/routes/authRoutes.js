@@ -10,12 +10,12 @@ const profilePhoto_1 = require("../controllers/profilePhoto");
 const eventEmitter_1 = __importDefault(require("../utils/eventEmitter"));
 const registration_1 = require("../controllers/registration");
 const forgotPassword_1 = require("../controllers/forgotPassword");
-const userValidtor_1 = require("../validators/userValidtor");
+const user_schema_1 = require("../schema/user.schema");
 // Set up the event listener to use the function
 eventEmitter_1.default.on('userVerified', registration_1.completeRegistration);
 const authRouter = (0, express_1.Router)();
 exports.authRouter = authRouter;
-authRouter.post('/signup', userValidtor_1.validateUserSignup, auth_1.SignUp);
+authRouter.post('/signup', user_schema_1.validateUserSignup, auth_1.SignUp);
 authRouter.post('/verify-otp', auth_1.verifyOTP);
 //Use multer to handle multipart/form-data requests.
 authRouter.post('/login', profilePhoto_1.upload.none(), auth_1.Login);
